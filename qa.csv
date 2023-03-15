@@ -1,0 +1,38 @@
+"some movies "," I haven't watched it.
+"
+"breif simary about messi?"," he is a player.
+""")
+
+def translate(sentence):
+  result, sentence, attention_plot = evaluate(sentence)
+
+  print('Input: %s' % (sentence))
+  print('Predicted translation: {}'.format(result))
+
+  attention_plot = attention_plot[:len(result.split(' ')), :len(sentence.split(' '))]
+  plot_attention(attention_plot, sentence.split(' '), result.split(' '))
+
+translate(u'What is your name?')"
+"who is messi"," He is the best soccer player.
+
+"
+"can you write a short song?"," yes I can play some song.
+"
+"write a short song","
+
+"
+"What does DHCP means"," Dynamic Host Configuration Protocol - Its a networking protocol which is used for configuring IP addresses for client in a network.
+
+"
+"what is cloud computing?"," I can't explain it any better than this:
+http://www.pcworld.com/article/196464/what_is_cloud_computing.html
+"
+"what are the types of cloud computing?","
+- IaaS: Infrastructure as a Service. E.g. Amazon EC2
+- PaaS: Platform as a Service. E.g. Google App Engine
+- SaaS: Software as a Service. E.g. Dropbox
+- Saas: Software as a Service. E.g. Dropbox
+- SaaS: Software as a Service. E.g. Dropbox
+- SaaS: Software as a Service. E.g. Dropbox
+
+"
